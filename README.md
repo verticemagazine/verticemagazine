@@ -1,16 +1,34 @@
-## Hi there 👋
+from pathlib import Path
 
-<!--
-**verticemagazine/verticemagazine** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Contenido del archivo README.md adaptado para VÉRTICE MAGAZINE
+readme_content = """# VÉRTICE MAGAZINE ✧
 
-Here are some ideas to get you started:
+Bienvenidxs a VÉRTICE — una revista de moda, estilismo y producción visual con base en Rosario, Argentina.  
+Nos dedicamos a contar historias con estética, mirada crítica y profundidad cultural.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Cada edición es un universo: imágenes que inspiran, textos que incomodan, entrevistas que importan.
+
+🖤 Biblioteca digital de ediciones independientes  
+📸 Producción fotográfica y audiovisual  
+🧵 Diseño, dirección de arte y estilismo  
+🌎 Una mirada contemporánea sobre lo que vestimos y lo que somos
+
+## 📚 Explorá nuestras ediciones  
+👉 [Ver ediciones digitales](https://verticemagazine.github.io)
+
+## 🔗 También podés encontrarnos en  
+- [Instagram](https://instagram.com/verticemagazine)  
+- [Pinterest](https://pinterest.com/verticemagazine)  
+- [Substack](https://verticemagazine.substack.com)
+
+---
+
+> VÉRTICE es una esquina donde se cruzan la moda, la cultura y lo independiente.  
+> Nos animamos a mirar desde otro ángulo.
+"""
+
+# Guardar el archivo
+readme_path = Path("/mnt/data/README.md")
+readme_path.write_text(readme_content, encoding="utf-8")
+
+readme_path.name
