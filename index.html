@@ -2,90 +2,39 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vértice Magazine</title>
+  <title>VÉRTICE MAGAZINE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gobold+High&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Gobold&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #111;
-    }
-
-    h1 {
-      font-family: 'Gobold High', sans-serif;
-      font-size: 3rem;
-      margin: 0;
-    }
-
-    p.slogan {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
-      font-weight: 300;
-    }
-
-    .library {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 2rem;
-    }
-
-    .magazine {
-      width: 300px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .magazine:hover {
-      transform: scale(1.05);
-    }
-
-    .magazine img {
-      width: 100%;
-      height: auto;
-      border: 3px solid white;
-    }
-
-    .magazine-title {
-      text-align: center;
-      margin-top: 0.5rem;
-      font-family: 'Gobold', sans-serif;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      background-color: #111;
-      color: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
     <h1>VÉRTICE MAGAZINE</h1>
-    <p class="slogan">Donde la moda se cruza con todo</p>
+    <p>Donde la moda se cruza con todo</p>
   </header>
 
-  <section class="library">
-    <div class="magazine" onclick="window.open('revistas/vertice-1/index.html', '_blank')">
-      <img src="portadas/vertice1.jpg" alt="Vértice Magazine #1">
-      <div class="magazine-title">#1 ISSUE - Primavera/Verano 2024</div>
+  <div class="flipbook-container">
+    <div id="flipbook">
+      <div class="page"><img src="pages/page1.jpg" alt="Página 1"></div>
+      <div class="page"><img src="pages/page2.jpg" alt="Página 2"></div>
+      <div class="page"><img src="pages/page3.jpg" alt="Página 3"></div>
+      <div class="page"><img src="pages/page4.jpg" alt="Página 4"></div>
+      <!-- Agregá más páginas según tu revista -->
     </div>
+  </div>
 
-    <div class="magazine" onclick="window.open('revistas/vertice-2/index.html', '_blank')">
-      <img src="portadas/vertice2.jpg" alt="Vértice Magazine #2">
-      <div class="magazine-title">#2 ISSUE - Moda & Deporte</div>
-    </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="turn.min.js"></script>
+  <script>
+    $("#flipbook").turn({
+      width: 800,
+      height: 500,
+      autoCenter: true
+    });
+  </script>
+
+</body>
+</html>
